@@ -4,7 +4,7 @@ Um tema moderno, modular e desenvolvido inteiramente em Lua puro para o Neovim, 
 
 ![Murikai Showcase](media/screenshot.png)
 
-## ✨ Características
+## Características
 
 - **100% Lua Puro:** Adeus ao Vimscript legado. Arquitetura totalmente moderna, limpa e veloz.
 - **Arquitetura Modular:** Separação clara de responsabilidades (`palette`, `editor`, `syntax`, `plugins`).
@@ -13,7 +13,7 @@ Um tema moderno, modular e desenvolvido inteiramente em Lua puro para o Neovim, 
 - **Suporte Nativo a Tree-sitter:** Destaque de código extremamente preciso e granular.
 
 ## Plugins Suportados Nativamente
-O Murikai vem com ajustes visuais finos para as ferramentas mais utilizadas no ecossistema LazyVim:
+O Murikai vem com ajustes visuais finos para alguns plugins LazyVim:
 
 - Neo-tree (Aba lateral e ícones de status do Git)
 

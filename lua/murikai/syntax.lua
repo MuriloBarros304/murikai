@@ -7,7 +7,7 @@ function M.setup()
         -- 1. TRADITIONAL SYNTAX GROUPS
         -- These act as a fallback and foundation.
         Comment        = { fg = palette.beige, italic = true },
-        String         = { fg = palette.orange }, -- Using orange for strings based on your yank/args preference
+        String         = { fg = palette.orange },
         Character      = { fg = palette.orange },
         Number         = { fg = palette.purple },
         Float          = { fg = palette.purple },
@@ -33,9 +33,6 @@ function M.setup()
         Delimiter      = { fg = palette.yellow }, -- brackets (, [, {
         
         -- 2. MODERN TREE-SITTER GROUPS
-        -- Notice the syntax: ["@group.name"]. We have to use brackets and quotes 
-        -- because the '@' symbol and dots aren't standard Lua variable characters!
-        
         ["@variable"]           = { fg = palette.fg }, -- Normal variables
         ["@variable.builtin"]   = { fg = palette.purple }, -- 'self' or 'this'
         ["@variable.parameter"] = { fg = palette.orange }, -- Function arguments

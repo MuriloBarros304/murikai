@@ -1,7 +1,7 @@
--- 1. Pull in your centralized color palette
+-- 1. Pull in the centralized color palette
 local palette = require("murikai.palette")
 
--- 2. Define the background UI grays (same as editor.lua)
+-- 2. Define the background UI grays
 local ui_bg     = "#1c1b19"
 local ui_bg_alt = "#262522"
 
@@ -23,19 +23,19 @@ return {
         c = section_c
     },
     visual = {
-        -- Orange for Visual mode (matching your cursor/yank preference)
+        -- Orange for Visual mode
         a = { bg = palette.orange, fg = palette.bg, gui = 'bold' },
         b = { bg = ui_bg_alt, fg = palette.fg },
         c = section_c
     },
     replace = {
-        -- Pink for Replace mode (danger/override)
+        -- Pink for Replace mode
         a = { bg = palette.pink, fg = palette.bg, gui = 'bold' },
         b = { bg = ui_bg_alt, fg = palette.fg },
         c = section_c
     },
     command = {
-        -- Yellow for Command mode (typing : commands)
+        -- Yellow for Command mode
         a = { bg = palette.yellow, fg = palette.bg, gui = 'bold' },
         b = { bg = ui_bg_alt, fg = palette.fg },
         c = section_c

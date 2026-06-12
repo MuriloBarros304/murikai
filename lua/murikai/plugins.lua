@@ -4,9 +4,9 @@ local M = {}
 
 function M.setup()
     -- Reusing our UI background shades for sidebars and floating windows
-    local ui_bg        = "#1c1b19"
-    local ui_bg_alt    = "#262522"
-    local ui_bg_visual = "#312f2c"
+    local ui_bg        = "#0c0c0c" -- gray1
+    local ui_bg_alt    = "#393e46" -- gray2
+    local ui_bg_visual = "#948979" -- gray3
 
     local groups = {
         -- 1. Neo-tree (The File Explorer)
@@ -44,18 +44,6 @@ function M.setup()
         BlinkCmpDoc           = { fg = palette.fg, bg = ui_bg },
         BlinkCmpDocBorder     = { fg = ui_bg_alt, bg = ui_bg },
         BlinkCmpLabelMatch    = { fg = palette.orange, bold = true }, -- The typed characters
-
-        -- 5. Mini.icons (Filetype Icons)
-        -- Mini.icons sets baseline colors for different file extensions
-        MiniIconsAzure        = { fg = palette.blue },
-        MiniIconsBlue         = { fg = palette.light_blue },
-        MiniIconsCyan         = { fg = palette.light_blue },
-        MiniIconsGreen        = { fg = palette.green },
-        MiniIconsGrey         = { fg = palette.beige },
-        MiniIconsOrange       = { fg = palette.orange },
-        MiniIconsPurple       = { fg = palette.purple },
-        MiniIconsRed          = { fg = palette.pink },
-        MiniIconsYellow       = { fg = palette.yellow },
     }
 
     for group, settings in pairs(groups) do

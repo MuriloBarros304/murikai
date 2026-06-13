@@ -6,7 +6,7 @@ function M.setup()
     -- Reusing our UI background shades for sidebars and floating windows
     local ui_bg        = "#0c0c0c" -- gray1
     local ui_bg_alt    = "#393e46" -- gray2
-    local ui_bg_visual = "#948979" -- gray3
+    local ui_bg_visual = "#57595B" -- gray3
 
     local groups = {
         -- 1. Neo-tree (The File Explorer)
@@ -32,7 +32,6 @@ function M.setup()
         TelescopeMatching     = { fg = palette.orange, bold = true },
 
         -- 3. Gitsigns (Git status in the gutter)
-        -- We set 'bg' to "NONE" so it blends seamlessly with the line numbers
         GitSignsAdd           = { fg = palette.green, bg = "NONE" },
         GitSignsChange        = { fg = palette.yellow, bg = "NONE" },
         GitSignsDelete        = { fg = palette.pink, bg = "NONE" },

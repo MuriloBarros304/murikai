@@ -5,7 +5,7 @@ local M = {}
 function M.setup()
     local ui_bg        = "#0c0c0c" -- gray1
     local ui_bg_alt    = "#393e46" -- gray2
-    local ui_bg_visual = "#948979" -- gray3
+    local ui_bg_visual = "#57595B" -- gray3
 
     local groups = {
         -- 1. Base Editor UI
@@ -14,7 +14,7 @@ function M.setup()
         ColorColumn  = { bg = ui_bg_alt },
  
         -- 2. Visual Selection
-        Visual       = { bg = ui_bg_visual },
+        Visual       = { bg = ui_bg_visual, reverse = true },
         VisualNOS    = { link = "Visual" },
 
         -- 3. Cursor & Lines
@@ -24,6 +24,12 @@ function M.setup()
         LineNr       = { fg = palette.beige },
         CursorLineNr = { fg = palette.yellow, bg = palette.bg, bold = true },
         FieryYank    = { fg = palette.fg, bg = palette.orange, bold = true },
+        IlluminatedWordText  = { reverse = true },
+        IlluminatedWordRead  = { reverse = true },
+        IlluminatedWordWrite = { reverse = true },
+        LspReferenceText     = { reverse = true },
+        LspReferenceRead     = { reverse = true },
+        LspReferenceWrite    = { reverse = true },
 
         -- 4. Window Splits
         VertSplit    = { fg = ui_bg_visual, bg = palette.bg },

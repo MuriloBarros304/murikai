@@ -5,10 +5,10 @@ local colors = {
     beige      = "#e6db74", -- Comments, docstrings
     light_blue = "#66d9ef", -- Def, class, __init__, reserved words
     green      = "#a6e22e", -- Function names
-    pink       = "#f92672", -- For, while, from, keywords
+    pink       = "#f84285", -- For, while, from, keywords
     yellow     = "#ffd700", -- Brackets [, (, etc.
-    purple     = "#8462c2", -- None, NULL, inner brackets
-    blue       = "#179fff", -- Inner brackets
+    purple     = "#9c6de7", -- None, NULL, inner brackets
+    blue       = "#3093DA", -- Inner brackets
 }
 
 return colors

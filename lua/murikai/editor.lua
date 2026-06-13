@@ -14,7 +14,7 @@ function M.setup()
         ColorColumn  = { bg = ui_bg_alt },
  
         -- 2. Visual Selection
-        Visual       = { bg = ui_bg_visual, reverse = true },
+        Visual       = { bg = ui_bg_visual },
         VisualNOS    = { link = "Visual" },
 
         -- 3. Cursor & Lines
@@ -54,13 +54,13 @@ function M.setup()
         Question     = { fg = palette.orange, bold = true },
 
         -- 8. Tabs
-        TabLineSel   = { fg = palette.bg, bg = palette.orange, bold = true },
+        TabLineSel   = { fg = palette.ui_bg_alt, bg = palette.orange, bold = true },
         TabLine      = { fg = palette.fg, bg = ui_bg_alt },
         TabLineFill  = { bg = ui_bg },
 
     }
 
-    -- 8. The Engine: Loop through the table and apply highlights
+    -- 9. The Engine: Loop through the table and apply highlights
     for group, settings in pairs(groups) do
         vim.api.nvim_set_hl(0, group, settings)
     end

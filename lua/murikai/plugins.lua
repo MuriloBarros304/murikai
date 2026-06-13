@@ -12,13 +12,13 @@ function M.setup()
         -- 1. Neo-tree (The File Explorer)
         NeoTreeNormal         = { fg = palette.fg, bg = ui_bg },
         NeoTreeNormalNC       = { fg = palette.fg, bg = ui_bg },
-        NeoTreeDirectoryIcon  = { fg = palette.blue },
-        NeoTreeDirectoryName  = { fg = palette.light_blue, bold = true },
-        NeoTreeFileName       = { fg = palette.fg },
+        NeoTreeDirectoryIcon  = { fg = palette.orange },
+        NeoTreeDirectoryName  = { fg = palette.blue, bold = true },
+        NeoTreeFileName       = { fg = palette.beige },
         NeoTreeGitAdded       = { fg = palette.green },
         NeoTreeGitConflict    = { fg = palette.pink },
         NeoTreeGitDeleted     = { fg = palette.pink },
-        NeoTreeGitIgnored     = { fg = palette.beige },
+        NeoTreeGitIgnored     = { fg = ui_bg_visual },
         NeoTreeGitModified    = { fg = palette.yellow },
 
         -- 2. Telescope (The Fuzzy Finder)

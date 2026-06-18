@@ -14,7 +14,7 @@ function M.setup()
         ColorColumn  = { bg = ui_bg_alt },
  
         -- 2. Visual Selection
-        Visual       = { bg = ui_bg_visual },
+        Visual       = { reverse = true },
         VisualNOS    = { link = "Visual" },
 
         -- 3. Cursor & Lines
@@ -54,9 +54,9 @@ function M.setup()
         Question     = { fg = palette.orange, bold = true },
 
         -- 8. Tabs
-        TabLineSel   = { fg = palette.ui_bg_alt, bg = palette.orange, bold = true },
-        TabLine      = { fg = palette.fg, bg = ui_bg_alt },
-        TabLineFill  = { bg = ui_bg },
+        TabLineSel   = { fg = ui_bg_alt, bg = palette.orange, bold = true },
+        TabLine      = { fg = palette.fg, bg = ui_bg },
+        TabLineFill  = { bg = ui_bg_alt },
 
     }
 

@@ -13,7 +13,7 @@ function M.setup()
     -- 3. Load all our modular highlight groups
     require("murikai.editor").setup()
     require("murikai.syntax").setup()
-    require("murikai.plugins").setup()
+    -- require("murikai.plugins").setup()
 end
 
 return M

@@ -30,36 +30,46 @@ function M.setup()
         Special        = { fg = palette.blue },
         Identifier     = { fg = palette.fg },
         Constant       = { fg = palette.purple },
-        Delimiter      = { fg = palette.yellow }, -- brackets (, [, {
-        
+        -- Delimiter      = { fg = palette.yellow }, -- brackets (, [, {
+
         -- 2. MODERN TREE-SITTER GROUPS
         ["@variable"]           = { fg = palette.fg }, -- Normal variables
         ["@variable.builtin"]   = { fg = palette.purple }, -- 'self' or 'this'
         ["@variable.parameter"] = { fg = palette.orange }, -- Function arguments
-        
         ["@function"]           = { link = "Function" },
         ["@function.builtin"]   = { fg = palette.light_blue }, -- print(), len()
-        
         ["@keyword"]            = { link = "Keyword" },
         ["@keyword.function"]   = { fg = palette.light_blue }, -- 'def' or 'function'
         ["@keyword.return"]     = { fg = palette.pink }, -- 'return'
-        
         ["@type"]               = { link = "Type" },
         ["@type.builtin"]       = { fg = palette.light_blue }, -- built-in types
-        
         ["@constant"]           = { link = "Constant" },
         ["@constant.builtin"]   = { fg = palette.purple }, -- 'None', 'NULL', 'True', 'False'
-        
         ["@constructor"]        = { fg = palette.light_blue }, -- '__init__'
-        
         ["@string"]             = { link = "String" },
         ["@number"]             = { link = "Number" },
         ["@boolean"]            = { link = "Boolean" },
-        
         ["@comment"]            = { link = "Comment" },
-        
-        ["@punctuation.bracket"]   = { fg = palette.yellow }, -- Standard brackets
-        ["@punctuation.delimiter"] = { fg = palette.fg },     -- Commas, colons
+        ["@punctuation.delimiter"] = { fg = palette.beige }, -- Commas, colons
+
+        -- 3. RAINBOW DELIMITERS
+        ["@punctuation.bracket"]         = { fg = palette.yellow }, -- Fallback
+        ["rainbowdelimiter1"]            = { fg = palette.yellow }, -- Outermost ()
+        ["rainbowdelimiter2"]            = { fg = palette.orange },
+        ["rainbowdelimiter3"]            = { fg = palette.pink },
+        ["rainbowdelimiter4"]            = { fg = palette.light_blue },
+        ["rainbowdelimiter5"]            = { fg = palette.blue },
+        ["rainbowdelimiter6"]            = { fg = palette.purple }, -- Innermost ()
+
+        -- 4. MARKDOWN STRUCTURE
+        ["@markup.heading.1.markdown"]      = { fg = palette.pink, bold = true },
+        ["@markup.heading.2.markdown"]      = { fg = palette.orange, bold = true },
+        ["@markup.heading.3.markdown"]      = { fg = palette.yellow, bold = true },
+        ["@markup.heading.4.markdown"]      = { fg = palette.green, bold = true },
+        ["@markup.heading.5.markdown"]      = { fg = palette.light_blue, bold = true },
+        ["@markup.heading.6.markdown"]      = { fg = palette.purple, bold = true },
+        ["@markup.link.url.markdown"]       = { fg = palette.blue, underline = true },
+        ["@markup.link.label.markdown"]     = { fg = palette.green },
     }
 
     -- Loop through and apply

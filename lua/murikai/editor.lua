@@ -58,6 +58,20 @@ function M.setup()
         TabLine      = { fg = palette.fg, bg = ui_bg },
         TabLineFill  = { bg = ui_bg_alt },
 
+        -- 9. LSP Diagnostics
+        DiagnosticError       = { fg = palette.pink, undercurl = true },
+        DiagnosticWarn        = { fg = palette.yellow, undercurl = true },
+        DiagnosticInfo        = { fg = palette.light_blue, undercurl = true },
+        DiagnosticHint        = { fg = palette.beige, undercurl = true },
+ 
+        -- Virtual text adjustments
+        DiagnosticVirtualTextError = { fg = palette.pink, bg = "#1a0007" },
+        DiagnosticVirtualTextWarn  = { fg = palette.yellow, bg = "#1a1500" },
+
+        -- 10. Indentation Guides
+        IndentBlanklineChar                = { fg = "#1a1a1a" },
+        IndentBlanklineContextChar         = { fg = palette.purple, gui = "nocombine" },
+        IndentBlanklineSpaceCharBlankline  = { fg = "#1a1a1a" },
     }
 
     -- 9. The Engine: Loop through the table and apply highlights

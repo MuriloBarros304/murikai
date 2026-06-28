@@ -70,7 +70,7 @@ function M.setup()
 
         -- 10. Indentation Guides
         IndentBlanklineChar                = { fg = "#1a1a1a" },
-        IndentBlanklineContextChar         = { fg = palette.purple, gui = "nocombine" },
+        IndentBlanklineContextChar         = { fg = palette.purple, nocombine = true },
         IndentBlanklineSpaceCharBlankline  = { fg = "#1a1a1a" },
     }
 

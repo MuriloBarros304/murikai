@@ -60,10 +60,10 @@ function M.setup()
 
         -- 9. LSP Diagnostics
         DiagnosticError       = { fg = palette.pink, undercurl = true },
-        DiagnosticWarn        = { fg = palette.yellow, undercurl = true },
-        DiagnosticInfo        = { fg = palette.light_blue, undercurl = true },
-        DiagnosticHint        = { fg = palette.beige, undercurl = true },
- 
+        DiagnosticWarn        = { fg = palette.yellow },
+        DiagnosticInfo        = { fg = palette.light_blue },
+        DiagnosticHint        = { fg = palette.beige },
+
         -- Virtual text adjustments
         DiagnosticVirtualTextError = { fg = palette.pink, bg = "#1a0007" },
         DiagnosticVirtualTextWarn  = { fg = palette.yellow, bg = "#1a1500" },

@@ -1,10 +1,8 @@
 <div align="center">
-    <img src="media/logo.svg" alt="Murikai Logo" width="600">
+    <img src="media/logo.png" alt="Murikai Logo" width="600">
 
     <br><br>
 </div>
-<br>
-<br>
 
 Um tema moderno, modular e desenvolvido inteiramente em Lua puro para o Neovim baseado no Monokai, oferecendo uma experiência visual minimalista de alto contraste com fundo puramente preto (`#000000`) e realces vibrantes.
 
@@ -17,14 +15,14 @@ Para testar ou instalar diretamente em sua configuração do LazyVim, adicione o
 
 ```lua
 return {
-  {
-    "MuriloBarros304/murikai",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      vim.cmd("colorscheme murikai")
-    end,
-  }
+    {
+        "MuriloBarros304/murikai",
+        lazy = false,
+        priority = 1000,
+        config = function()
+        vim.cmd("colorscheme murikai")
+        end,
+    }
 }
 ```
 
@@ -33,11 +31,11 @@ Para garantir que a barra inferior combine perfeitamente com o tema, configure o
 
 ```lua
 return {
-  "nvim-lualine/lualine.nvim",
-  opts = {
-    options = {
-      theme = "murikai",
+    "nvim-lualine/lualine.nvim",
+    opts = {
+        options = {
+        theme = "murikai",
+        },
     },
-  },
 }
 ```

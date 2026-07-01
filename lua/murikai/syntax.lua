@@ -21,8 +21,8 @@ function M.setup()
         Keyword        = { fg = palette.pink },
         Exception      = { fg = palette.pink }, -- try, catch
         PreProc        = { fg = palette.light_blue }, -- import, from
-        Include        = { fg = palette.light_blue },
-        Define         = { fg = palette.light_blue },
+        Include        = { fg = palette.blue },
+        Define         = { fg = palette.purple },
         Type           = { fg = palette.light_blue }, -- class, int, string
         StorageClass   = { fg = palette.light_blue },
         Structure      = { fg = palette.light_blue },

@@ -59,7 +59,8 @@ function M.setup()
         TabLineFill  = { bg = ui_bg_alt },
 
         -- 9. LSP Diagnostics
-        DiagnosticError       = { fg = palette.pink, undercurl = true },
+        -- DiagnosticError       = { fg = palette.pink, undercurl = true },
+        DiagnosticError       = { fg = palette.pink },
         DiagnosticWarn        = { fg = palette.yellow },
         DiagnosticInfo        = { fg = palette.light_blue },
         DiagnosticHint        = { fg = palette.beige },

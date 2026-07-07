@@ -53,13 +53,13 @@ function M.setup()
         ["@punctuation.delimiter"] = { fg = palette.beige }, -- Commas, colons
 
         -- 3. RAINBOW DELIMITERS
-        ["@punctuation.bracket"]         = { fg = palette.yellow }, -- Fallback
-        ["rainbowdelimiter1"]            = { fg = palette.yellow }, -- Outermost ()
-        ["rainbowdelimiter2"]            = { fg = palette.orange },
-        ["rainbowdelimiter3"]            = { fg = palette.pink },
-        ["rainbowdelimiter4"]            = { fg = palette.light_blue },
-        ["rainbowdelimiter5"]            = { fg = palette.blue },
-        ["rainbowdelimiter6"]            = { fg = palette.purple }, -- Innermost ()
+        ["@punctuation.bracket"] = { fg = palette.yellow }, -- Fallback for standard brackets
+        RainbowDelimiterYellow = { fg = palette.yellow },      -- Outermost
+        RainbowDelimiterOrange = { fg = palette.orange },
+        RainbowDelimiterRed    = { fg = palette.pink },
+        RainbowDelimiterCyan   = { fg = palette.light_blue },
+        RainbowDelimiterBlue   = { fg = palette.blue },
+        RainbowDelimiterViolet = { fg = palette.purple },      -- Innermost
 
         -- 4. MARKDOWN STRUCTURE
         ["@markup.heading.1.markdown"]      = { fg = palette.pink, bold = true },

@@ -54,12 +54,12 @@ function M.setup()
 
         -- 3. RAINBOW DELIMITERS
         ["@punctuation.bracket"] = { fg = palette.yellow }, -- Fallback for standard brackets
-        RainbowDelimiterYellow = { fg = palette.yellow },      -- Outermost
+        RainbowDelimiterYellow = { fg = palette.yellow },   -- Outermost
         RainbowDelimiterOrange = { fg = palette.orange },
         RainbowDelimiterRed    = { fg = palette.pink },
         RainbowDelimiterCyan   = { fg = palette.light_blue },
         RainbowDelimiterBlue   = { fg = palette.blue },
-        RainbowDelimiterViolet = { fg = palette.purple },      -- Innermost
+        RainbowDelimiterViolet = { fg = palette.purple },   -- Innermost
 
         -- 4. MARKDOWN STRUCTURE
         ["@markup.heading.1.markdown"]      = { fg = palette.pink, bold = true },
@@ -70,6 +70,11 @@ function M.setup()
         ["@markup.heading.6.markdown"]      = { fg = palette.purple, bold = true },
         ["@markup.link.url.markdown"]       = { fg = palette.blue, underline = true },
         ["@markup.link.label.markdown"]     = { fg = palette.green },
+
+        -- 5. GIT SIGNS
+        GitSignsAdd = { fg = palette.green, bg = "NONE" }, -- New lines
+        GitSignsChange = { fg = palette.light_blue, bg = "NONE" },
+        GitSignsDelete = { fg = palette.yellow, bg = "NONE" },
     }
 
     -- Loop through and apply

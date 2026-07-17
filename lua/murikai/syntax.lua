@@ -51,15 +51,28 @@ function M.setup()
         ["@boolean"]            = { link = "Boolean" },
         ["@comment"]            = { link = "Comment" },
         ["@punctuation.delimiter"] = { fg = palette.beige }, -- Commas, colons
+        ["@property"]           = { fg = palette.light_blue }, -- e.g., the 'name' in user.name
+        ["@function.method"]    = { link = "Function" }, -- Green for class methods
+        ["@function.method.call"] = { link = "Function" },
+        ["@module"]             = { fg = palette.fg }, -- e.g., the 'numpy' in 'import numpy'
+        ["@string.escape"]      = { fg = palette.purple, bold = true }, -- \n, \t
+        ["@string.regexp"]      = { fg = palette.blue }, -- Regex patterns
+        ["@tag"]                = { fg = palette.pink }, -- <div>, <MyComponent>
+        ["@tag.attribute"]      = { fg = palette.green, italic = true }, -- className, onClick
+        ["@tag.delimiter"]      = { fg = palette.yellow }, -- The < and > brackets
+        ["@operator"]           = { link = "Operator" }, -- +, -, =, ->
+        ["@keyword.directive"]  = { fg = palette.pink }, -- #include, #define in C
+        ["@keyword.import"]     = { link = "Include" }, -- import, require
 
         -- 3. RAINBOW DELIMITERS
         ["@punctuation.bracket"] = { fg = palette.yellow }, -- Fallback for standard brackets
-        RainbowDelimiterYellow = { fg = palette.yellow },   -- Outermost
+        RainbowDelimiterYellow = { fg = palette.yellow },
         RainbowDelimiterOrange = { fg = palette.orange },
         RainbowDelimiterRed    = { fg = palette.pink },
         RainbowDelimiterCyan   = { fg = palette.light_blue },
         RainbowDelimiterBlue   = { fg = palette.blue },
-        RainbowDelimiterViolet = { fg = palette.purple },   -- Innermost
+        RainbowDelimiterViolet = { fg = palette.purple },
+        RainbowDelimiterGreen = {fg = palette.green},
 
         -- 4. MARKDOWN STRUCTURE
         ["@markup.heading.1.markdown"]      = { fg = palette.pink, bold = true },
@@ -75,6 +88,16 @@ function M.setup()
         GitSignsAdd = { fg = palette.green, bg = "NONE" }, -- New lines
         GitSignsChange = { fg = palette.light_blue, bg = "NONE" },
         GitSignsDelete = { fg = palette.yellow, bg = "NONE" },
+
+        -- 6. LSP DIAGNOSTICS
+        DiagnosticError = { fg = palette.pink },
+        DiagnosticWarn  = { fg = palette.yellow },
+        DiagnosticInfo  = { fg = palette.light_blue },
+        DiagnosticHint  = { fg = palette.beige },
+        DiagnosticUnderlineError = { sp = palette.pink, undercurl = true },
+        DiagnosticUnderlineWarn  = { sp = palette.yellow, undercurl = true },
+        DiagnosticUnderlineInfo  = { sp = palette.light_blue, undercurl = true },
+        DiagnosticUnderlineHint  = { sp = palette.beige, undercurl = true },
     }
 
     -- Loop through and apply

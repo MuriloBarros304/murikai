@@ -14,12 +14,12 @@ function M.setup()
         Boolean        = { fg = palette.purple },
         Function       = { fg = palette.green },
         Statement      = { fg = palette.pink },
-        Conditional    = { fg = palette.pink }, -- if, then, else
-        Repeat         = { fg = palette.pink }, -- for, while
+        Conditional    = { fg = palette.pink, bold = true }, -- if, then, else
+        Repeat         = { fg = palette.pink, bold = true }, -- for, while
         Label          = { fg = palette.pink },
-        Operator       = { fg = palette.fg },
+        Operator       = { fg = palette.pink },
         Keyword        = { fg = palette.pink },
-        Exception      = { fg = palette.pink }, -- try, catch
+        Exception      = { fg = palette.pink, bold = true }, -- try, catch
         PreProc        = { fg = palette.light_blue }, -- import, from
         Include        = { fg = palette.blue },
         Define         = { fg = palette.purple },
@@ -85,9 +85,9 @@ function M.setup()
         ["@markup.link.label.markdown"]     = { fg = palette.green },
 
         -- 5. GIT SIGNS
-        GitSignsAdd = { fg = palette.green, bg = "NONE" }, -- New lines
-        GitSignsChange = { fg = palette.light_blue, bg = "NONE" },
-        GitSignsDelete = { fg = palette.yellow, bg = "NONE" },
+        GitSignsAdd    = { fg = palette.green, bg = "NONE" }, -- New lines
+        GitSignsChange = { fg = palette.yellow, bg = "NONE" }, -- Changed lines
+        GitSignsDelete = { fg = palette.pink, bg = "NONE" },   -- Deleted lines
 
         -- 6. LSP DIAGNOSTICS
         DiagnosticError = { fg = palette.pink },

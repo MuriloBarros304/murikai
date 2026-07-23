@@ -73,6 +73,19 @@ function M.setup()
         IndentBlanklineChar                = { fg = "#1a1a1a" },
         IndentBlanklineContextChar         = { fg = palette.purple, nocombine = true },
         IndentBlanklineSpaceCharBlankline  = { fg = "#1a1a1a" },
+
+        -- 11. Floating Windows (Lazy, Mason, Hover Docs)
+        NormalFloat  = { fg = palette.fg, bg = ui_bg },
+        FloatBorder  = { fg = ui_bg_visual, bg = ui_bg },
+        FloatTitle   = { fg = palette.orange, bg = ui_bg, bold = true },
+
+        -- Lazy.nvim Specifics (Lazy sometimes overrides standard floats)
+        LazyNormal   = { fg = palette.fg, bg = ui_bg },
+        LazyBorder   = { fg = ui_bg_visual, bg = ui_bg },
+
+        -- Mason Specifics
+        MasonNormal  = { link = "NormalFloat" },
+        MasonHeader  = { fg = palette.bg, bg = palette.pink, bold = true },
     }
 
     -- 9. The Engine: Loop through the table and apply highlights

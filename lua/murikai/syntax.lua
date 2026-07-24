@@ -18,7 +18,7 @@ function M.setup()
         Repeat         = { fg = palette.pink, bold = true }, -- for, while
         Label          = { fg = palette.pink },
         Operator       = { fg = palette.pink },
-        Keyword        = { fg = palette.pink },
+        Keyword        = { fg = palette.pink, bold = true },
         Exception      = { fg = palette.pink, bold = true }, -- try, catch
         PreProc        = { fg = palette.light_blue }, -- import, from
         Include        = { fg = palette.blue },

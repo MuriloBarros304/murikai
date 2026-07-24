@@ -8,6 +8,8 @@ function M.setup()
         vim.cmd("syntax reset")
     end
 
+    vim.opt.termguicolors = true
+
     -- 2. Tell Neovim the official name of the active theme
     vim.g.colors_name = "murikai"
 
@@ -25,16 +27,6 @@ function M.setup()
     vim.g.terminal_color_5  = palette.purple     -- Magenta
     vim.g.terminal_color_6  = palette.light_blue -- Cyan
     vim.g.terminal_color_7  = palette.fg         -- White
-
-    -- Bright versions (using slightly lighter/different palette shades)
-    vim.g.terminal_color_8  = "#666666"          -- Bright Black (Gray)
-    vim.g.terminal_color_9  = "#ff6e9e"          -- Bright Red
-    vim.g.terminal_color_10 = "#c8fe4a"          -- Bright Green
-    vim.g.terminal_color_11 = palette.beige      -- Bright Yellow
-    vim.g.terminal_color_12 = "#5ab0f0"          -- Bright Blue
-    vim.g.terminal_color_13 = "#b88afa"          -- Bright Magenta
-    vim.g.terminal_color_14 = palette.orange     -- Bright Cyan
-    vim.g.terminal_color_15 = "#ffffff"          -- Bright White
 end
 
 return M

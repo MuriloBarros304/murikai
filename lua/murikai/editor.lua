@@ -3,15 +3,15 @@ local palette = require("murikai.palette")
 local M = {}
 
 function M.setup()
-    local ui_bg        = "#0c0c0c" -- gray1
-    local ui_bg_alt    = "#393e46" -- gray2
-    local ui_bg_visual = "#57595B" -- gray3
+    -- local ui_bg        = "#0c0c0c" -- gray1
+    -- local ui_bg_alt    = "#393e46" -- gray2
+    -- local ui_bg_visual = "#57595B" -- gray3
 
     local groups = {
         -- 1. Base Editor UI
         Normal       = { fg = palette.fg, bg = palette.bg },
-        NonText      = { fg = ui_bg_visual },
-        ColorColumn  = { bg = ui_bg_alt },
+        NonText      = { fg = palette.gray3 },
+        ColorColumn  = { bg = palette.gray2 },
  
         -- 2. Visual Selection
         Visual       = { reverse = true },
@@ -19,7 +19,7 @@ function M.setup()
 
         -- 3. Cursor & Lines
         Cursor       = { fg = palette.bg, bg = palette.orange },
-        CursorLine   = { bg = ui_bg },
+        CursorLine   = { bg = palette.gray1 },
         CursorColumn = { link = "CursorLine" },
         LineNr       = { fg = palette.beige },
         CursorLineNr = { fg = palette.yellow, bg = palette.bg, bold = true },
@@ -32,8 +32,8 @@ function M.setup()
         LspReferenceWrite    = { reverse = true },
 
         -- 4. Window Splits
-        VertSplit    = { fg = ui_bg_visual, bg = palette.bg },
-        WinSeparator = { fg = ui_bg_visual, bg = palette.bg },
+        VertSplit    = { fg = palette.gray3, bg = palette.bg },
+        WinSeparator = { fg = palette.gray3, bg = palette.bg },
  
         -- 5. Searching
         Search       = { fg = palette.bg, bg = palette.yellow },
@@ -41,9 +41,9 @@ function M.setup()
         CurSearch    = { link = "IncSearch" },
  
         -- 6. Pmenu (Popups like autocompletion)
-        Pmenu        = { fg = palette.fg, bg = ui_bg },
-        PmenuSel     = { bg = ui_bg_visual, reverse = true },
-        PmenuSbar    = { bg = ui_bg_visual },
+        Pmenu        = { fg = palette.fg, bg = palette.gray1 },
+        PmenuSel     = { bg = palette.gray3, reverse = true },
+        PmenuSbar    = { bg = palette.gray3 },
         PmenuThumb   = { bg = palette.fg },
 
         -- 7. Messages
@@ -54,9 +54,9 @@ function M.setup()
         Question     = { fg = palette.orange, bold = true },
 
         -- 8. Tabs
-        TabLineSel   = { fg = ui_bg_alt, bg = palette.orange, bold = true },
-        TabLine      = { fg = palette.fg, bg = ui_bg },
-        TabLineFill  = { bg = ui_bg_alt },
+        TabLineSel   = { fg = palette.gray2, bg = palette.orange, bold = true },
+        TabLine      = { fg = palette.fg, bg = palette.gray1 },
+        TabLineFill  = { bg = palette.gray2 },
 
         -- 9. LSP Diagnostics
         -- DiagnosticError       = { fg = palette.pink, undercurl = true },
@@ -66,29 +66,28 @@ function M.setup()
         DiagnosticHint        = { fg = palette.beige },
 
         -- Virtual text adjustments
-        DiagnosticVirtualTextError = { fg = palette.pink, bg = "#1a0007" },
-        DiagnosticVirtualTextWarn  = { fg = palette.yellow, bg = "#1a1500" },
+        DiagnosticVirtualTextError = { fg = palette.pink, bg = palette.gray2 },
+        DiagnosticVirtualTextWarn  = { fg = palette.yellow, bg = palette.gray1 },
 
         -- 10. Indentation Guides
-        IndentBlanklineChar                = { fg = "#1a1a1a" },
-        IndentBlanklineContextChar         = { fg = palette.purple, nocombine = true },
-        IndentBlanklineSpaceCharBlankline  = { fg = "#1a1a1a" },
+        -- IndentBlanklineChar                = { fg = "#1a1a1a" },
+        -- IndentBlanklineContextChar         = { fg = palette.purple, nocombine = true },
+        -- IndentBlanklineSpaceCharBlankline  = { fg = "#1a1a1a" },
 
         -- 11. Floating Windows (Lazy, Mason, Hover Docs)
-        NormalFloat  = { fg = palette.fg, bg = ui_bg },
-        FloatBorder  = { fg = ui_bg_visual, bg = ui_bg },
-        FloatTitle   = { fg = palette.orange, bg = ui_bg, bold = true },
+        NormalFloat  = { fg = palette.fg, bg = palette.gray1 },
+        FloatBorder  = { fg = palette.gray3, bg = palette.gray1 },
+        FloatTitle   = { fg = palette.orange, bg = palette.gray1, bold = true },
 
         -- Lazy.nvim Specifics (Lazy sometimes overrides standard floats)
-        LazyNormal   = { fg = palette.fg, bg = ui_bg },
-        LazyBorder   = { fg = ui_bg_visual, bg = ui_bg },
+        LazyNormal   = { fg = palette.fg, bg = palette.gray1 },
+        LazyBorder   = { fg = palette.gray3, bg = palette.gray1 },
 
         -- Mason Specifics
         MasonNormal  = { link = "NormalFloat" },
         MasonHeader  = { fg = palette.bg, bg = palette.pink, bold = true },
     }
 
-    -- 9. The Engine: Loop through the table and apply highlights
     for group, settings in pairs(groups) do
         vim.api.nvim_set_hl(0, group, settings)
     end

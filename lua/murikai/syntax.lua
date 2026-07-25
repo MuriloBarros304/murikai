@@ -30,7 +30,7 @@ function M.setup()
         Special        = { fg = palette.blue },
         Identifier     = { fg = palette.fg },
         Constant       = { fg = palette.purple },
-        -- Delimiter      = { fg = palette.yellow }, -- brackets (, [, {
+        Delimiter      = { fg = palette.yellow }, -- brackets (, [, {
 
         -- 2. MODERN TREE-SITTER GROUPS
         ["@variable"]           = { fg = palette.fg }, -- Normal variables
@@ -40,7 +40,7 @@ function M.setup()
         ["@function.builtin"]   = { fg = palette.light_blue }, -- print(), len()
         ["@keyword"]            = { link = "Keyword" },
         ["@keyword.function"]   = { fg = palette.light_blue }, -- 'def' or 'function'
-        ["@keyword.return"]     = { fg = palette.pink }, -- 'return'
+        ["@keyword.return"]     = { fg = palette.pink, bold = true }, -- 'return'
         ["@type"]               = { link = "Type" },
         ["@type.builtin"]       = { fg = palette.light_blue }, -- built-in types
         ["@constant"]           = { link = "Constant" },
@@ -63,6 +63,10 @@ function M.setup()
         ["@operator"]           = { link = "Operator" }, -- +, -, =, ->
         ["@keyword.directive"]  = { fg = palette.pink }, -- #include, #define in C
         ["@keyword.import"]     = { link = "Include" }, -- import, require
+        ["@lsp.type.class"]     = { link = "Type" },
+        ["@lsp.type.namespace"] = { link = "@module" },
+        ["@lsp.typemod.method.defaultLibrary"] = { link = "Function" },
+        ["@lsp.typemod.function.defaultLibrary"] = { link = "Function" },
 
         -- 3. RAINBOW DELIMITERS
         ["@punctuation.bracket"] = { fg = palette.yellow }, -- Fallback for standard brackets

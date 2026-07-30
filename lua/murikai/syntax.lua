@@ -7,12 +7,17 @@ function M.setup()
         -- 1. TRADITIONAL SYNTAX GROUPS
         -- These act as a fallback and foundation.
         Comment        = { fg = palette.beige, italic = true },
+        -- Constants
+        Constant       = { fg = palette.purple },
         String         = { fg = palette.orange },
         Character      = { fg = palette.orange },
         Number         = { fg = palette.purple },
         Float          = { fg = palette.purple },
         Boolean        = { fg = palette.purple },
+        -- Identifiers
+        Identifier     = { fg = palette.fg },
         Function       = { fg = palette.green },
+        -- Statements
         Statement      = { fg = palette.pink },
         Conditional    = { fg = palette.pink, bold = true }, -- if, then, else
         Repeat         = { fg = palette.pink, bold = true }, -- for, while
@@ -20,22 +25,35 @@ function M.setup()
         Operator       = { fg = palette.pink },
         Keyword        = { fg = palette.pink, bold = true },
         Exception      = { fg = palette.pink, bold = true }, -- try, catch
+        -- Preprocessors
         PreProc        = { fg = palette.light_blue }, -- import, from
         Include        = { fg = palette.blue },
         Define         = { fg = palette.purple },
+        Macro          = { fg = palette.light_blue },
+        PreCondit      = { fg = palette.light_blue },
+        -- Types
         Type           = { fg = palette.light_blue }, -- class, int, string
         StorageClass   = { fg = palette.light_blue },
         Structure      = { fg = palette.light_blue },
         Typedef        = { fg = palette.light_blue },
+        -- Special Characters & Tags
         Special        = { fg = palette.blue },
-        Identifier     = { fg = palette.fg },
-        Constant       = { fg = palette.purple },
-        Delimiter      = { fg = palette.yellow }, -- brackets (, [, {
+        SpecialChar    = { fg = palette.pink },       -- Special characters inside strings
+        Tag            = { fg = palette.pink },
+        Delimiter      = { fg = palette.yellow },     -- brackets (, [, {
+        SpecialComment = { fg = palette.beige, bold = true },
+        Debug          = { fg = palette.orange },
+        -- Text Markup & Alerts
+        Underlined     = { underline = true },
+        Ignore         = { fg = palette.bg },         -- Hidden text
+        Error          = { fg = palette.bg, bg = palette.pink, bold = true },
+        Todo           = { fg = palette.bg, bg = palette.yellow, bold = true },
 
         -- 2. MODERN TREE-SITTER GROUPS
         ["@variable"]           = { fg = palette.fg }, -- Normal variables
         ["@variable.builtin"]   = { fg = palette.purple }, -- 'self' or 'this'
         ["@variable.parameter"] = { fg = palette.orange }, -- Function arguments
+        ["@variable.member"] = { fg = palette.light_blue }, -- Attributes
         ["@function"]           = { link = "Function" },
         ["@function.builtin"]   = { fg = palette.light_blue }, -- print(), len()
         ["@keyword"]            = { link = "Keyword" },
@@ -51,10 +69,10 @@ function M.setup()
         ["@boolean"]            = { link = "Boolean" },
         ["@comment"]            = { link = "Comment" },
         ["@punctuation.delimiter"] = { fg = palette.beige }, -- Commas, colons
-        ["@property"]           = { fg = palette.light_blue }, -- e.g., the 'name' in user.name
+        ["@property"]           = { link = "@variable.member" }, -- e.g., the 'name' in user.name
         ["@function.method"]    = { link = "Function" }, -- Green for class methods
         ["@function.method.call"] = { link = "Function" },
-        ["@module"]             = { fg = palette.fg }, -- e.g., the 'numpy' in 'import numpy'
+        ["@module"]             = { fg = palette.purple }, -- e.g., the 'numpy' in 'import numpy'
         ["@string.escape"]      = { fg = palette.purple, bold = true }, -- \n, \t
         ["@string.regexp"]      = { fg = palette.blue }, -- Regex patterns
         ["@tag"]                = { fg = palette.pink }, -- <div>, <MyComponent>
@@ -64,6 +82,7 @@ function M.setup()
         ["@keyword.directive"]  = { fg = palette.pink }, -- #include, #define in C
         ["@keyword.import"]     = { link = "Include" }, -- import, require
         ["@lsp.type.class"]     = { link = "Type" },
+        ["@lsp.type.property"] = { link = "@variable.member" },
         ["@lsp.type.namespace"] = { link = "@module" },
         ["@lsp.typemod.method.defaultLibrary"] = { link = "Function" },
         ["@lsp.typemod.function.defaultLibrary"] = { link = "Function" },

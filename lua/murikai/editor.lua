@@ -53,10 +53,15 @@ function M.setup()
         ModeMsg      = { fg = palette.yellow, bold = true },
         Question     = { fg = palette.orange, bold = true },
 
-        -- 8. Tabs
+        -- 8. Tabs and NeoTree
         TabLineSel   = { fg = palette.gray2, bg = palette.orange, bold = true },
         TabLine      = { fg = palette.fg, bg = palette.gray1 },
         TabLineFill  = { bg = palette.gray2 },
+        NeoTreeNormal   = { fg = palette.gray3, bg = palette.bg },
+        NeoTreeNormalNC = { fg = palette.gray3, bg = palette.bg },
+        NeoTreeFileName = { fg = palette.beige },
+        NeoTreeDirIcon  = { fg = palette.gray3 },
+        NeoTreeIndentMarker = { fg = palette.gray1 },
 
         -- 9. LSP Diagnostics
         -- DiagnosticError       = { fg = palette.pink, undercurl = true },
@@ -70,9 +75,9 @@ function M.setup()
         DiagnosticVirtualTextWarn  = { fg = palette.yellow, bg = palette.gray1 },
 
         -- 10. Indentation Guides
-        -- IndentBlanklineChar                = { fg = "#1a1a1a" },
-        -- IndentBlanklineContextChar         = { fg = palette.purple, nocombine = true },
-        -- IndentBlanklineSpaceCharBlankline  = { fg = "#1a1a1a" },
+        IblIndent = { fg = palette.gray2 }, -- For indent-blankline
+        IblScope  = { fg = palette.gray3 },
+        MiniIndentscopeSymbol = { fg = palette.gray2 }, -- For mini.indentscope
 
         -- 11. Floating Windows (Lazy, Mason, Hover Docs)
         NormalFloat  = { fg = palette.fg, bg = palette.gray1 },

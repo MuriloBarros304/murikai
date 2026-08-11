@@ -51,7 +51,7 @@ function M.setup()
 
         -- 2. MODERN TREE-SITTER GROUPS
         ["@variable"]           = { fg = palette.fg }, -- Normal variables
-        ["@variable.builtin"]   = { fg = palette.purple }, -- 'self' or 'this'
+        ["@variable.builtin"]   = { fg = palette.green }, -- 'self' or 'this'
         ["@variable.parameter"] = { fg = palette.orange }, -- Function arguments
         ["@variable.member"] = { fg = palette.light_blue }, -- Attributes
         ["@function"]           = { link = "Function" },
@@ -60,7 +60,7 @@ function M.setup()
         ["@keyword.function"]   = { fg = palette.light_blue }, -- 'def' or 'function'
         ["@keyword.return"]     = { fg = palette.pink, bold = true }, -- 'return'
         ["@type"]               = { link = "Type" },
-        ["@type.builtin"]       = { fg = palette.light_blue }, -- built-in types
+        ["@type.builtin"]       = { fg = palette.green }, -- built-in types
         ["@constant"]           = { link = "Constant" },
         ["@constant.builtin"]   = { fg = palette.purple }, -- 'None', 'NULL', 'True', 'False'
         ["@constructor"]        = { fg = palette.light_blue }, -- '__init__'

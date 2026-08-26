@@ -5,8 +5,8 @@ local section_c = { bg = palette.gray1, fg = palette.fg }
 -- Map the modes
 return {
     normal = {
-        -- Blue for Normal mode
-        a = { bg = palette.blue, fg = palette.bg, gui = 'bold' },
+        -- Light Blue for Normal mode
+        a = { bg = palette.light_blue, fg = palette.bg },
         b = { bg = palette.gray2, fg = palette.fg },
         c = section_c
     },
@@ -35,8 +35,8 @@ return {
         c = section_c
     },
     terminal = {
-        -- Light Blue for Terminal mode
-        a = { bg = palette.light_blue, fg = palette.bg, gui = 'bold' },
+        -- Blue for Terminal mode
+        a = { bg = palette.blue, fg = palette.bg, gui = 'bold' },
         b = { bg = palette.gray2, fg = palette.fg },
         c = section_c
     },

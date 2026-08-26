@@ -60,7 +60,7 @@ function M.setup()
         ["@keyword.function"]   = { fg = palette.light_blue }, -- 'def' or 'function'
         ["@keyword.return"]     = { fg = palette.pink, bold = true }, -- 'return'
         ["@type"]               = { link = "Type" },
-        ["@type.builtin"]       = { fg = palette.green }, -- built-in types
+        ["@type.builtin"]       = { link = "Type" }, -- built-in types
         ["@constant"]           = { link = "Constant" },
         ["@constant.builtin"]   = { fg = palette.purple }, -- 'None', 'NULL', 'True', 'False'
         ["@constructor"]        = { fg = palette.light_blue }, -- '__init__'
@@ -89,9 +89,9 @@ function M.setup()
 
         -- 3. RAINBOW DELIMITERS
         ["@punctuation.bracket"] = { fg = palette.yellow }, -- Fallback for standard brackets
-        RainbowDelimiterYellow = { fg = palette.yellow },
+        RainbowDelimiterYellow = { fg = palette.pink }, -- I know this is not yellow
         RainbowDelimiterOrange = { fg = palette.orange },
-        RainbowDelimiterRed    = { fg = palette.pink },
+        RainbowDelimiterRed    = { fg = palette.yellow },
         RainbowDelimiterCyan   = { fg = palette.light_blue },
         RainbowDelimiterBlue   = { fg = palette.blue },
         RainbowDelimiterViolet = { fg = palette.purple },

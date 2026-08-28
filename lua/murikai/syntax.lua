@@ -6,11 +6,11 @@ function M.setup()
     local groups = {
         -- 1. TRADITIONAL SYNTAX GROUPS
         -- These act as a fallback and foundation.
-        Comment        = { fg = palette.beige, italic = true },
+        Comment        = { fg = palette.orange, italic = true },
         -- Constants
         Constant       = { fg = palette.purple },
-        String         = { fg = palette.orange },
-        Character      = { fg = palette.orange },
+        String         = { fg = palette.beige },
+        Character      = { fg = palette.beige },
         Number         = { fg = palette.purple },
         Float          = { fg = palette.purple },
         Boolean        = { fg = palette.purple },
@@ -41,8 +41,8 @@ function M.setup()
         SpecialChar    = { fg = palette.pink },       -- Special characters inside strings
         Tag            = { fg = palette.pink },
         Delimiter      = { fg = palette.yellow },     -- brackets (, [, {
-        SpecialComment = { fg = palette.beige, bold = true },
-        Debug          = { fg = palette.orange },
+        SpecialComment = { fg = palette.orange, bold = true },
+        Debug          = { fg = palette.beige },
         -- Text Markup & Alerts
         Underlined     = { underline = true },
         Ignore         = { fg = palette.bg },         -- Hidden text

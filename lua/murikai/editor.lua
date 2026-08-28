@@ -21,7 +21,7 @@ function M.setup()
         Cursor       = { fg = palette.bg, bg = palette.orange },
         CursorLine   = { bg = palette.gray1 },
         CursorColumn = { link = "CursorLine" },
-        LineNr       = { fg = palette.beige },
+        LineNr       = { fg = palette.orange },
         CursorLineNr = { fg = palette.yellow, bg = palette.bg, bold = true },
         FieryYank    = { fg = palette.fg, bg = palette.orange, bold = true },
         IlluminatedWordText  = { reverse = true },
@@ -59,7 +59,7 @@ function M.setup()
         TabLineFill  = { bg = palette.gray2 },
         NeoTreeNormal   = { fg = palette.gray3, bg = palette.bg },
         NeoTreeNormalNC = { fg = palette.gray3, bg = palette.bg },
-        NeoTreeFileName = { fg = palette.beige },
+        NeoTreeFileName = { fg = palette.yellow },
         NeoTreeDirIcon  = { fg = palette.gray3 },
         NeoTreeIndentMarker = { fg = palette.gray1 },
 

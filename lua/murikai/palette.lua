@@ -7,11 +7,11 @@ local colors = {
     orange     = "#fc971f", -- Cursor, yank effect, args
     beige      = "#e6db74", -- Comments, docstrings
     light_blue = "#66d9ef", -- Def, class, __init__, reserved words
-    green      = "#55EB7B", -- Function names
+    green      = "#4fe275", -- Function names
     pink       = "#f84285", -- For, while, from, keywords
     yellow     = "#ffd700", -- Brackets [, (, etc.
     purple     = "#9c6de7", -- None, NULL, inner brackets
-    blue       = "#3093DA", -- Inner brackets
+    blue       = "#1E90FF", -- Inner brackets
 }
 
 return colors

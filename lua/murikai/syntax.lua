@@ -6,7 +6,7 @@ function M.setup()
     local groups = {
         -- 1. TRADITIONAL SYNTAX GROUPS
         -- These act as a fallback and foundation.
-        Comment        = { fg = palette.orange, italic = true },
+        Comment        = { fg = palette.beige, italic = true },
         -- Constants
         Constant       = { fg = palette.purple },
         String         = { fg = palette.beige },

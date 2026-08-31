@@ -86,6 +86,16 @@ function M.setup()
         ["@lsp.type.namespace"] = { link = "@module" },
         ["@lsp.typemod.method.defaultLibrary"] = { link = "Function" },
         ["@lsp.typemod.function.defaultLibrary"] = { link = "Function" },
+        ["@attribute"]           = { fg = palette.blue }, -- The 'dataclass' word
+        ["@attribute.builtin"]   = { fg = palette.blue }, -- Built-ins like property or staticmethod
+        ["@punctuation.special"] = { fg = palette.pink },
+        ["@tag.builtin"]           = { fg = palette.pink }, -- Standard DOM tags (div, span, a, p)
+        ["@tag.attribute.builtin"] = { fg = palette.green }, -- Standard attributes (class, id, href)
+        ["@string.special.url"]    = { fg = palette.blue, underline = true }, -- The actual URL string inside href="url"
+        ["@constant.character"]    = { fg = palette.purple }, -- HTML entities like &nbsp;, &amp;, &copy;
+        ["@markup.heading"]        = { fg = palette.orange, bold = true }, -- Text inside <h1>, <h2>, etc.
+        ["@markup.strong"]         = { fg = palette.fg, bold = true }, -- Text inside <b> or <strong>
+        ["@markup.italic"]         = { fg = palette.fg, italic = true }, -- Text inside <i> or <em>
 
         -- 3. RAINBOW DELIMITERS
         ["@punctuation.bracket"] = { fg = palette.yellow }, -- Fallback for standard brackets

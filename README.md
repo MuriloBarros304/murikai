@@ -1,12 +1,12 @@
 <div align="center">
-    <img src="media/logo.png" alt="Murikai Logo" width="600">
+    <img src="media/logo.png" alt="Neolux Logo" width="600">
 </div>
 <br>
 <br>
 
-Um tema moderno, modular e desenvolvido inteiramente em Lua puro para o Neovim baseado no Monokai, oferecendo uma experiência visual minimalista de alto contraste com fundo puramente preto (`#000000`) e realces vibrantes.
+Um tema moderno, modular e desenvolvido inteiramente em Lua puro para o Neovim, baseado no Monokai, oferecendo uma experiência visual minimalista de alto contraste com fundo puramente preto (`#000000`) e realces vibrantes.
 
-![Murikai Screenshot](media/screenshot.png)
+![Neolux Screenshot](media/screenshot.png)
 
 ## Instalação e Configuração
 
@@ -17,11 +17,11 @@ Adicione o seguinte spec em sua configuração — normalmente em `~/.config/nvi
 ```lua
 return {
     {
-        "MuriloBarros304/murikai",
+        "MuriloBarros304/neolux",
         lazy = false,
         priority = 1000,
         config = function()
-            vim.cmd("colorscheme murikai")
+            vim.cmd("colorscheme neolux")
         end,
     },
 }
@@ -34,11 +34,11 @@ Se você usa a distribuição [LazyVim](https://www.lazyvim.org/), crie (ou edit
 ```lua
 return {
     {
-        "MuriloBarros304/murikai",
+        "MuriloBarros304/neolux",
         lazy = false,
         priority = 1000,
         config = function()
-            vim.cmd("colorscheme murikai")
+            vim.cmd("colorscheme neolux")
         end,
     },
     -- Desabilita o tema padrão do LazyVim
@@ -56,29 +56,29 @@ Você pode instalar manualmente clonando o repositório diretamente na pasta de 
 
 ```bash
 # Linux / macOS
-git clone https://github.com/MuriloBarros304/murikai \
-  ~/.local/share/nvim/site/pack/themes/start/murikai
+git clone https://github.com/MuriloBarros304/neolux \
+  ~/.local/share/nvim/site/pack/themes/start/neolux
 ```
 
 Depois, adicione em seu `~/.config/nvim/init.lua`:
 
 ```lua
-vim.cmd("colorscheme murikai")
+vim.cmd("colorscheme neolux")
 ```
 
 Ou, se ainda usar `init.vim`:
 
 ```vim
-colorscheme murikai
+colorscheme neolux
 ```
 
 ### 4. Packer.nvim
 
 ```lua
 use {
-    "MuriloBarros304/murikai",
+    "MuriloBarros304/neolux",
     config = function()
-        vim.cmd("colorscheme murikai")
+        vim.cmd("colorscheme neolux")
     end,
 }
 ```
@@ -88,20 +88,20 @@ Após salvar o arquivo, execute `:PackerSync` dentro do Neovim.
 ### 5. vim-plug
 
 ```vim
-Plug 'MuriloBarros304/murikai'
+Plug 'MuriloBarros304/neolux'
 ```
 
 Após adicionar a linha acima entre `call plug#begin()` e `call plug#end()`, execute `:PlugInstall`. Em seguida, adicione ao final do seu `init.vim`:
 
 ```vim
-colorscheme murikai
+colorscheme neolux
 ```
 
 ---
 
 ## Lualine
 
-Para garantir que a barra de status combine perfeitamente com o tema, configure o [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) para utilizar o perfil do Murikai.
+Para garantir que a barra de status combine perfeitamente com o tema, configure o [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) para utilizar o perfil do neolux.
 
 **Com Lazy.nvim / LazyVim** — em `lua/plugins/lualine.lua`:
 
@@ -110,7 +110,7 @@ return {
     "nvim-lualine/lualine.nvim",
     opts = {
         options = {
-            theme = "murikai",
+            theme = "neolux",
         },
     },
 }
@@ -121,7 +121,7 @@ return {
 ```lua
 require("lualine").setup({
     options = {
-        theme = "murikai",
+        theme = "neolux",
     },
 })
 ```

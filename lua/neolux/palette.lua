@@ -12,6 +12,7 @@ local colors = {
     yellow     = "#ffd700", -- Brackets [, (, etc.
     purple     = "#9c6de7", -- None, NULL, inner brackets
     blue       = "#1E90FF", -- Inner brackets
+    dark_blue  = "#011F4B", -- Some text colors
 }
 
 return colors

@@ -1,4 +1,4 @@
-local palette = require("murikai.palette")
+local palette = require("neolux.palette")
 
 local M = {}
 
@@ -124,7 +124,7 @@ function M.setup()
 
         -- 6. LSP DIAGNOSTICS
         DiagnosticError = { fg = palette.pink },
-        DiagnosticWarn  = { fg = palette.yellow },
+        DiagnosticWarn  = { fg = palette.dark_blue },
         DiagnosticInfo  = { fg = palette.light_blue },
         DiagnosticHint  = { fg = palette.beige },
         DiagnosticUnderlineError = { sp = palette.pink, undercurl = true },

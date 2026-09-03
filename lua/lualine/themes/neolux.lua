@@ -6,7 +6,7 @@ local section_c = { bg = palette.gray1, fg = palette.fg }
 return {
     normal = {
         -- Light Blue for Normal mode
-        a = { bg = palette.light_blue, fg = palette.dark_blue },
+        a = { bg = palette.light_blue, fg = palette.dark_blue, gui = 'bold' },
         b = { bg = palette.gray2, fg = palette.fg },
         c = section_c
     },

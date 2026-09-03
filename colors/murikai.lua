@@ -1,1 +1,0 @@
-require("murikai").setup()

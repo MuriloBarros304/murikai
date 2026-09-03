@@ -1,8 +1,7 @@
 local M = {}
-local palette = require("murikai.palette")
+local palette = require("neolux.palette")
 
 function M.setup()
-    -- 1. Clear out any existing highlights so colors don't bleed over
     vim.cmd("hi clear")
     if vim.fn.exists("syntax_on") then
         vim.cmd("syntax reset")
@@ -10,15 +9,12 @@ function M.setup()
 
     vim.opt.termguicolors = true
 
-    -- 2. Tell Neovim the official name of the active theme
-    vim.g.colors_name = "murikai"
+    vim.g.colors_name = "neolux"
 
-    -- 3. Load all our modular highlight groups
-    require("murikai.editor").setup()
-    require("murikai.syntax").setup()
-    -- require("murikai.plugins").setup()
+    require("neolux.editor").setup()
+    require("neolux.syntax").setup()
+    -- require("neolux.plugins").setup()
 
-    -- Terminal Colors for seamless :terminal experience
     vim.g.terminal_color_0  = palette.bg         -- Black
     vim.g.terminal_color_1  = palette.pink       -- Red
     vim.g.terminal_color_2  = palette.green      -- Green

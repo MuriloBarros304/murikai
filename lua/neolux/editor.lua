@@ -1,4 +1,4 @@
-local palette = require("murikai.palette")
+local palette = require("neolux.palette")
 
 local M = {}
 
